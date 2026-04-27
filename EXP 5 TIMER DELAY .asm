@@ -1,0 +1,15 @@
+START: MOV P1, #00H
+       ACALL DELAY
+       MOV P1, #0FFH
+       ACALL DELAY
+       SJMP START
+
+DELAY: MOV TMOD, #01H
+       MOV TH0, #0FCH
+       MOV TL0, #018H
+       SETB TR0
+AGAIN: JNB TF0, AGAIN
+       CLR TR0
+       CLR TF0
+       RET
+
