@@ -1,0 +1,12 @@
+ORG 0000H
+LJMP MAIN
+
+ORG 0003H      ; Timer0 ISR
+INC P1
+RETI
+
+MAIN: MOV IE, #01H
+      MOV TCON, #82H     ; Enable Timer0 Interrupt
+      MOV P1,#00H
+HERE: SJMP HERE
+END
