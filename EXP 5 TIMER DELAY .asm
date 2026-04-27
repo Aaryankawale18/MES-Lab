@@ -1,15 +1,12 @@
-START: MOV P1, #00H
-       ACALL DELAY
-       MOV P1, #0FFH
-       ACALL DELAY
-       SJMP START
+ORG 0000H
+LJMP MAIN
 
-DELAY: MOV TMOD, #01H
-       MOV TH0, #0FCH
-       MOV TL0, #018H
-       SETB TR0
-AGAIN: JNB TF0, AGAIN
-       CLR TR0
-       CLR TF0
-       RET
+ORG 000BH      ; Timer0 ISR
+CPL P1.0
+RETI
 
+MAIN: MOV TMOD, #01H
+      MOV IE, #82H     ; Enable Timer0 Interrupt
+      SETB TR0
+      SJMP $
+END
