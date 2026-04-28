@@ -1,0 +1,82 @@
+;FOR 1
+ORG OOOH
+SET B P0.7
+SETB P3.3 Ao = 1
+CLR P3.4; A * 1 = 0
+MOVA, #0794
+MOV P1, A
+
+;For 2:
+ORG OOOH
+SET B PO-7
+CLR P3.3; Ao = 1
+SETB P3.4; A * 1 = 0
+MOV A, #OAGH
+MOV P1, A
+
+;For 3:
+ORG OOOH
+SETB PO.7
+CLR P3.3; AD = 1
+CLR P3.4; A * 1 = 0
+MOVA, # OBOH
+MOV P1, A
+
+;For 4!
+ORG OOOH
+SET B 20.7
+CLR P3.3; Ao = 0
+SETB P3.4; A * 1 = 1
+MOV A #099H
+MOV P1, A
+
+;For 5:
+ORG OOO H
+SET B PO-7
+SETB P3.3; A * 0 = 1
+CLR P3.4; A 1=/0
+MOV A, #092 H
+MOV P1, A
+
+;For 6:
+SETB PO.7
+SETB P3.3 Ao = 1
+SETB P3.4 A * 1 = 1
+MOV A, #002H 
+Mov P1, A
+
+;For 7:
+ORG OOOH
+SET B P3.3
+SET B 93.4
+MOVA #OFOH
+MOV P1, A
+
+;For 8:
+ORG OOOH
+SETB P3.3
+SET B P3.4
+MOV A, #oo0H
+MOV P1, A
+
+For 9:
+ORG OOOH
+SETB P3.3
+SETB P3.4
+MOV A, #0904
+
+MOV P1, A
+
+For 0:
+
+ORG OOOH
+
+SET B P0.7
+
+SET B P3.3 AO = 1
+
+SETB P3.4; A1 = 0
+
+MOVA, #OCOM
+
+MOV P1, A
